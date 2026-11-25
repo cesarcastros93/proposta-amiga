@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UAI Tech | Sites, apps e bots com IA</title>
+<meta name="description" content="César Castro, de Belo Horizonte: sites, aplicativos, bots de WhatsApp, imagens e vídeos com IA. Projeto inicial sem custo para amigos e pessoas próximas.">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#09091A;--card:#14122B;--line:#2E2A5C;--ink:#EEF0FF;--mute:#A9ABCB;--roxo:#A66BFF;--rosa:#FF4FB8;--azul:#3D7BFF;--marca:#CDB2FF;--wa:#1FA85F}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.55;font-size:17px;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;background:url(img/logo.jpg) center 30%/min(90vw,640px) no-repeat;opacity:.09;mix-blend-mode:screen;pointer-events:none;z-index:0}
+body:after{content:"";position:fixed;inset:0;background:radial-gradient(60% 40% at 15% 0%,rgba(166,107,255,.22),transparent),radial-gradient(50% 40% at 90% 30%,rgba(255,79,184,.14),transparent);pointer-events:none;z-index:0}
+main,header,footer{position:relative;z-index:1}
+.w{max-width:1040px;margin:0 auto;padding:0 22px}
+section{padding:60px 0}
+h1{font-size:clamp(2.7rem,8vw,5rem);line-height:1.02;font-weight:800;margin:0 0 20px;letter-spacing:-.025em}
+h2{font-size:clamp(1.7rem,4vw,2.3rem);line-height:1.15;margin:0 0 22px;font-weight:800}
+h3{margin:0 0 6px;font-size:1.1rem}
+p{margin:0 0 14px;max-width:62ch}
+.mute{color:var(--mute)}
+mark{background:var(--marca);color:#1A1033;padding:0 .15em}
+.btn{display:inline-block;background:linear-gradient(90deg,var(--roxo),var(--rosa));color:#fff;text-decoration:none;font-weight:600;padding:14px 22px;border-radius:10px;box-shadow:0 0 22px rgba(166,107,255,.45)}
+.btn.alt{background:transparent;border:2px solid var(--roxo);box-shadow:none;margin-left:8px}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--marca);outline-offset:3px}
+.hero{display:grid;gap:36px;grid-template-columns:1.15fr .85fr;align-items:center;padding-top:48px}
+.chat{background:#101024;border:1px solid var(--line);border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:10px;font-size:15px;box-shadow:0 0 40px rgba(61,123,255,.2)}
+.chat .h{font-size:13px;color:var(--mute)}
+.m{padding:9px 13px;border-radius:12px;max-width:85%;background:#1D1C3D}
+.m.o{align-self:flex-end;background:#3B2A7A}
+.convite{border:1px solid var(--line);border-radius:14px;padding:22px;background:linear-gradient(135deg,rgba(166,107,255,.14),rgba(255,79,184,.1))}
+.about{display:grid;grid-template-columns:260px 1fr;gap:32px;align-items:start}
+.foto{width:100%;border-radius:16px;border:1px solid var(--line);box-shadow:0 0 30px rgba(166,107,255,.3)}
+.stage{perspective:1000px;display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.fl{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;transform-style:preserve-3d;transition:transform .25s,box-shadow .25s,opacity .25s}
+.stage.on .fl{opacity:.6}
+.stage.on .fl.up{opacity:1;transform:translateZ(60px) scale(1.06);box-shadow:0 20px 50px rgba(166,107,255,.45);border-color:var(--roxo);z-index:2}
+.cases{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.case{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.case img{width:100%;max-height:300px;object-fit:cover;object-position:top;display:block}
+.case div{padding:18px}
+.tag{display:inline-block;font-size:13px;color:var(--marca);border:1px solid var(--line);border-radius:20px;padding:1px 10px;margin-bottom:8px}
+.steps{counter-reset:s;display:grid;gap:14px;padding:0;list-style:none}
+.steps li{counter-increment:s;padding-left:46px;position:relative}
+.steps li:before{content:counter(s);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--roxo),var(--rosa));display:grid;place-items:center;font-weight:800}
+.note{border-left:4px solid var(--rosa);padding:4px 0 4px 16px;margin:18px 0}
+.verso{text-align:center;font-size:1.3rem;font-weight:600;max-width:34ch;margin:0 auto 6px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mute);font-size:15px}
+@media (max-width:760px){.hero,.about{grid-template-columns:1fr}.about img{max-width:240px}.btn.alt{margin:10px 0 0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fl{transition:none}}
+</style>
+</head>
+<body>
+<header class="w hero">
+  <div>
+    <h1>Sua ideia no ar, com IA, <mark>sem custo para começar</mark>.</h1>
+    <p>Eu crio sites, aplicativos, bots de WhatsApp, imagens e vídeos com inteligência artificial. Para amigos e pessoas próximas, o primeiro projeto sai sem custo. Só pago o que for necessário se você gostar.</p>
+    <a class="btn" href="https://wa.me/5531994753089?text=Oi%20C%C3%A9sar!%20Vi%20sua%20p%C3%A1gina%20e%20tenho%20uma%20ideia." target="_blank" rel="noopener">Falar no WhatsApp</a>
+    <a class="btn alt" href="#como">Como funciona</a>
+  </div>
+  <div class="chat" aria-label="Exemplo de conversa com um bot de atendimento">
+    <div class="h">Exemplo: bot de atendimento de uma loja</div>
+    <div class="m">Oi! Vocês entregam no sábado?</div>
+    <div class="m o">Oi, tudo bem? Entregamos sim, até as 16h. Qual produto você quer? Posso te mostrar os mais vendidos.</div>
+    <div class="m">Quero o kit de 3.</div>
+    <div class="m o">Ótima escolha! Posso gerar seu link de pagamento agora?</div>
+  </div>
+</header>
+
+<main>
+<section class="w"><div class="convite">
+  <h2 style="margin-bottom:10px">Se você recebeu este link, é por um motivo</h2>
+  <p style="margin:0">Você foi escolhido(a) porque é uma pessoa próxima e de confiança para mim. Tenho carinho por você e quero ajudar a desenvolver o seu projeto, o seu sonho, a sua visão de negócio. O principal é ajudar.</p>
+</div></section>
+
+<section id="sobre"><div class="w about">
+  <img class="foto" src="img/cesar.jpg" alt="César Castro">
+  <div>
+    <h2>Quem sou eu</h2>
+    <p>Sou <strong>César Castro</strong>, tenho 34 anos e moro em Belo Horizonte, Minas Gerais. Estou cursando Análise e Desenvolvimento de Sistemas na Uniamérica e trabalho com tecnologia há 19 anos, desde os 15.</p>
+    <p>Sempre fui entusiasta da inteligência artificial e das inovações desse mercado. A <strong>UAI Tech</strong> nasceu para levar essa tecnologia a quem tem uma boa ideia, mas não tem tempo, conhecimento ou paciência para tirá-la do papel.</p>
+    <p>Em 2017, quando ainda não existia IA para criar programas, desenvolvi do zero uma automação completa em Excel que vendi para nutricionistas, treinadores e coaches, além de outros programas para outros segmentos. Foi o início de tudo.</p>
+    <p>Fiquei um período afastado das redes e dos projetos por motivos pessoais. Agora estou de volta, com mais experiência, ajudando pessoas próximas e montando um portfólio com resultados reais.</p>
+  </div>
+</div></section>
+
+<section id="servicos"><div class="w">
+  <h2>O que eu posso criar para você</h2>
+  <p class="mute">Passe o mouse (ou toque) em um card para destacá-lo.</p>
+  <div class="stage" id="stage">
+    <div class="fl" tabindex="0"><h3>Sites e landing pages</h3><p class="mute">Página para apresentar seu negócio ou vender um produto, pronta para celular.</p></div>
+    <div class="fl" tabindex="0"><h3>Aplicativos</h3><p class="mute">Ferramentas sob medida para organizar, calcular ou automatizar o que hoje é feito na mão.</p></div>
+    <div class="fl" tabindex="0"><h3>Bots de WhatsApp</h3><p class="mute">Atendimento automático treinado no seu negócio, com técnicas de venda e retorno para quem sumiu.</p></div>
+    <div class="fl" tabindex="0"><h3>Imagens com IA</h3><p class="mute">Artes, modelos digitais e fotos de produto para redes e catálogos.</p></div>
+    <div class="fl" tabindex="0"><h3>Propaganda e comerciais</h3><p class="mute">Roteiro, vídeo e peças de divulgação feitos com IA, rápidos e baratos.</p></div>
+    <div class="fl" tabindex="0"><h3>Outras ideias</h3><p class="mute">Não achou o que precisa? Conte o que imagina e eu digo se é possível.</p></div>
+  </div>
+</div></section>
+
+<section id="cases"><div class="w">
+  <h2>Projetos que já saíram do papel</h2>
+  <div class="cases">
+    <div class="case"><img src="img/video.jpg" alt="Vídeo com personagens de IA"><div><span class="tag">Vídeo com IA</span><h3>Trabalho escolar “Cidade Alerta”</h3><p class="mute">Telejornal infantil criado com IA de um dia para o outro. O grupo tirou nota 10.</p></div></div>
+    <div class="case"><img src="img/modelos.jpg" alt="Modelo digital de IA vestindo pijama"><div><span class="tag">Imagens com IA</span><h3>Modelos digitais para lojas</h3><p class="mute">A loja envia a foto da peça e recebe uma modelo de IA para divulgar, sem ensaio tradicional.</p></div></div>
+    <div class="case"><img src="img/robo.jpg" alt="Painel do robô Horus Quant"><div><span class="tag">Em teste</span><h3>Robô Horus Quant</h3><p class="mute">Robô de operações automáticas em cripto, hoje em ambiente simulado (sem dinheiro real), para validar a estratégia.</p></div></div>
+    <div class="case"><img src="img/painel.jpg" alt="Painel de campanhas de WhatsApp"><div><span class="tag">Protótipo</span><h3>Painel de campanhas</h3><p class="mute">Ferramenta para importar contatos que autorizaram, montar campanhas e organizar a fila de mensagens. Ainda em simulação.</p></div></div>
+    <div class="case"><div><span class="tag">Automação</span><h3>Bots de vendas no WhatsApp</h3><p class="mute">Atendem, usam técnicas de venda e copywriting, chamam para a compra e voltam a falar com quem parou de responder.</p></div></div>
+    <div class="case"><div><span class="tag">2017</span><h3>Sistema em Excel</h3><p class="mute">Gerava dieta e treino com a logomarca de cada profissional, em pagamento único, sem assinatura.</p></div></div>
+  </div>
+</div></section>
+
+<section id="como"><div class="w">
+  <h2>Como funciona</h2>
+  <ol class="steps">
+    <li><h3>Você me conta a ideia</h3><span class="mute">Pelo WhatsApp. Pode ser algo simples ou ainda confuso.</span></li>
+    <li><h3>Eu monto um protótipo sem custo</h3><span class="mute">Você vê funcionando antes de decidir qualquer coisa.</span></li>
+    <li><h3>Se você gostar, colocamos no ar</h3><span class="mute">Eu configuro tudo e você já começa a usar.</span></li>
+    <li><h3>Você paga um valor simbólico</h3><span class="mute">Mais os custos das ferramentas, que costumam ser baixos. Sem mensalidade minha.</span></li>
+  </ol>
+  <div class="note"><strong>Por que é tão barato?</strong> Estou montando meu portfólio e atendo poucas pessoas próximas. Em troca, peço um depoimento sincero e autorização para mostrar o resultado.</div>
+</div></section>
+
+<section id="contato"><div class="w" style="text-align:center">
+  <h2>Vamos conversar sobre a sua ideia?</h2>
+  <p style="margin:0 auto 18px">Mande uma mensagem. Respondo pessoalmente e sem compromisso.</p>
+  <a class="btn" href="https://wa.me/5531994753089?text=Oi%20C%C3%A9sar!%20Vi%20sua%20p%C3%A1gina%20e%20tenho%20uma%20ideia." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+  <a class="btn alt" href="https://instagram.com/uai_iatech" target="_blank" rel="noopener">@uai_iatech</a>
+  <p class="verso" style="margin-top:46px">“Mais bem-aventurado é dar do que receber.”</p>
+  <p class="mute" style="margin:0 auto">Atos 20:35</p>
+</div></section>
+</main>
+
+<footer><div class="w">UAI Tech · Automações e Sistemas · César Castro · Belo Horizonte, MG</div></footer>
+
+<script>
+(function(){
+  var s=document.getElementById("stage"),c=s.querySelectorAll(".fl");
+  function on(el){s.classList.add("on");c.forEach(function(x){x.classList.toggle("up",x===el)})}
+  function off(){s.classList.remove("on");c.forEach(function(x){x.classList.remove("up")})}
+  c.forEach(function(el){
+    el.addEventListener("mouseenter",function(){on(el)});
+    el.addEventListener("focus",function(){on(el)});
+    el.addEventListener("click",function(){on(el)});
+  });
+  s.addEventListener("mouseleave",off);
+  s.addEventListener("focusout",off);
+})();
+</script>
+</body>
+</html>
