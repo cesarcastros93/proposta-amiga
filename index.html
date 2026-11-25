@@ -50,14 +50,50 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--marca);outline-offset
 footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mute);font-size:15px}
 @media (max-width:760px){.hero,.about{grid-template-columns:1fr}.about img{max-width:240px}.btn.alt{margin:10px 0 0}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fl{transition:none}}
+
+section{scroll-margin-top:70px}
+.nav{position:sticky;top:0;z-index:5;background:rgba(9,9,26,.82);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .w{display:flex;gap:6px;flex-wrap:wrap;align-items:center;padding:10px 22px}
+.nav b{margin-right:auto;font-weight:800;font-size:1.1rem}
+.nav a{color:var(--ink);text-decoration:none;padding:6px 14px;border-radius:20px;transition:transform .2s,background .2s}
+.nav a:hover,.nav a:focus-visible{transform:scale(1.18);background:linear-gradient(90deg,var(--roxo),var(--rosa))}
+.titulo{font-size:clamp(3.2rem,12.5vw,7.4rem);line-height:.97;max-width:none;margin:36px 0 28px}
+@media(min-width:900px){.titulo{width:calc(100% + 150px);margin-left:-75px}}
+.titulo mark{padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.btn{transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:scale(1.08)}
+.big{font-size:1.25rem;padding:18px 34px}
+.pulse{animation:pulse 2.2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 22px rgba(166,107,255,.45)}50%{box-shadow:0 0 46px rgba(255,79,184,.85)}}
+.cta{text-align:center;padding:34px 22px}
+.cta p{margin:0 auto 16px;font-size:1.5rem;font-weight:600}
+.case{transition:transform .25s,box-shadow .25s}
+.case:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(166,107,255,.35)}
+.foto2{display:block;width:100%;max-width:300px;border-radius:16px;border:1px solid var(--line);margin-top:18px}
+.xls{background:#fff;color:#222;font-size:12px;margin:0;border-radius:8px;overflow:hidden;border:1px solid #ccc}
+.xls .t{background:#1D6F42;color:#fff;padding:6px 10px;font-weight:600}
+.xls table{width:100%;border-collapse:collapse}
+.xls th{background:#E9EEF0;text-align:left}
+.xls th,.xls td{padding:4px 8px;border:1px solid #D5D9DB}
+.xls .s{background:#F3F5F6;padding:4px 10px;font-size:11px;color:#555}
+.wa{background:#0B141A;border-radius:12px;overflow:hidden;font-size:14px;color:#E9EDEF}
+.wa .hd{background:#1F2C34;padding:10px 12px;display:flex;gap:10px;align-items:center}
+.wa .av{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#F7B6D2,#C9A8FF);display:grid;place-items:center;font-size:18px}
+.wa .bd{padding:12px;display:flex;flex-direction:column;gap:8px}
+.wa .b{background:#1F2C34;padding:8px 11px;border-radius:10px;max-width:85%}
+.wa .b.u{align-self:flex-end;background:#005C4B}
+.wa small{color:#8696A0}
+@media (prefers-reduced-motion:reduce){.pulse{animation:none}.btn,.case,.nav a{transition:none}}
 </style>
 </head>
 <body>
-<header class="w hero">
+<nav class="nav"><div class="w"><b>UAI Tech</b><a href="#sobre">Quem sou eu</a><a href="#servicos">Serviços</a><a href="#cases">Projetos</a><a href="#como">Como funciona</a><a href="#contato">Contato</a></div></nav>
+<header class="w">
+  <h1 class="titulo">Sua ideia no ar, com IA, <mark>sem custo para começar</mark>.</h1>
+  <div class="hero">
   <div>
-    <h1>Sua ideia no ar, com IA, <mark>sem custo para começar</mark>.</h1>
     <p>Eu crio sites, aplicativos, bots de WhatsApp, imagens e vídeos com inteligência artificial. Para amigos e pessoas próximas, o primeiro projeto sai sem custo. Só pago o que for necessário se você gostar.</p>
-    <a class="btn" href="https://wa.me/5531994753089?text=Oi%20C%C3%A9sar!%20Vi%20sua%20p%C3%A1gina%20e%20tenho%20uma%20ideia." target="_blank" rel="noopener">Falar no WhatsApp</a>
+    <a class="btn" href="https://wa.me/5531994753689?text=Oi%20C%C3%A9sar!%20Vi%20sua%20p%C3%A1gina%20e%20tenho%20uma%20ideia." target="_blank" rel="noopener">Falar no WhatsApp</a>
     <a class="btn alt" href="#como">Como funciona</a>
   </div>
   <div class="chat" aria-label="Exemplo de conversa com um bot de atendimento">
@@ -66,6 +102,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mute);font-si
     <div class="m o">Oi, tudo bem? Entregamos sim, até as 16h. Qual produto você quer? Posso te mostrar os mais vendidos.</div>
     <div class="m">Quero o kit de 3.</div>
     <div class="m o">Ótima escolha! Posso gerar seu link de pagamento agora?</div>
+  </div>
   </div>
 </header>
 
@@ -76,13 +113,14 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mute);font-si
 </div></section>
 
 <section id="sobre"><div class="w about">
-  <img class="foto" src="img/cesar.jpg" alt="César Castro">
+  <img class="foto" src="img/quarto.jpg" alt="César Castro trabalhando no notebook">
   <div>
     <h2>Quem sou eu</h2>
     <p>Sou <strong>César Castro</strong>, tenho 34 anos e moro em Belo Horizonte, Minas Gerais. Estou cursando Análise e Desenvolvimento de Sistemas na Uniamérica e trabalho com tecnologia há 19 anos, desde os 15.</p>
     <p>Sempre fui entusiasta da inteligência artificial e das inovações desse mercado. A <strong>UAI Tech</strong> nasceu para levar essa tecnologia a quem tem uma boa ideia, mas não tem tempo, conhecimento ou paciência para tirá-la do papel.</p>
     <p>Em 2017, quando ainda não existia IA para criar programas, desenvolvi do zero uma automação completa em Excel que vendi para nutricionistas, treinadores e coaches, além de outros programas para outros segmentos. Foi o início de tudo.</p>
     <p>Fiquei um período afastado das redes e dos projetos por motivos pessoais. Agora estou de volta, com mais experiência, ajudando pessoas próximas e montando um portfólio com resultados reais.</p>
+    <img class="foto2" src="img/cesar.jpg" alt="César Castro">
   </div>
 </div></section>
 
@@ -99,6 +137,8 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mute);font-si
   </div>
 </div></section>
 
+<section class="w cta"><p>Tem uma ideia na cabeça?</p><a class="btn big pulse" href="https://wa.me/5531994753689?text=Oi%20C%C3%A9sar!%20Vi%20sua%20p%C3%A1gina%20e%20tenho%20uma%20ideia." target="_blank" rel="noopener">Quero tirar minha ideia do papel</a></section>
+
 <section id="cases"><div class="w">
   <h2>Projetos que já saíram do papel</h2>
   <div class="cases">
@@ -106,10 +146,12 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mute);font-si
     <div class="case"><img src="img/modelos.jpg" alt="Modelo digital de IA vestindo pijama"><div><span class="tag">Imagens com IA</span><h3>Modelos digitais para lojas</h3><p class="mute">A loja envia a foto da peça e recebe uma modelo de IA para divulgar, sem ensaio tradicional.</p></div></div>
     <div class="case"><img src="img/robo.jpg" alt="Painel do robô Horus Quant"><div><span class="tag">Em teste</span><h3>Robô Horus Quant</h3><p class="mute">Robô de operações automáticas em cripto, hoje em ambiente simulado (sem dinheiro real), para validar a estratégia.</p></div></div>
     <div class="case"><img src="img/painel.jpg" alt="Painel de campanhas de WhatsApp"><div><span class="tag">Protótipo</span><h3>Painel de campanhas</h3><p class="mute">Ferramenta para importar contatos que autorizaram, montar campanhas e organizar a fila de mensagens. Ainda em simulação.</p></div></div>
-    <div class="case"><div><span class="tag">Automação</span><h3>Bots de vendas no WhatsApp</h3><p class="mute">Atendem, usam técnicas de venda e copywriting, chamam para a compra e voltam a falar com quem parou de responder.</p></div></div>
-    <div class="case"><div><span class="tag">2017</span><h3>Sistema em Excel</h3><p class="mute">Gerava dieta e treino com a logomarca de cada profissional, em pagamento único, sem assinatura.</p></div></div>
+    <div class="case"><div style="padding:14px 14px 0"><div class="wa"><div class="hd"><div class="av">💆</div><div><strong>Clínica de Estética</strong><br><small>exemplo ilustrativo</small></div></div><div class="bd"><div class="b">Olá! Bem-vindo à nossa clínica de estética. Qual é o seu nome?</div><div class="b u">Eliane</div><div class="b">Eliane, tudo bem? Do que você deseja saber hoje sobre os nossos procedimentos? Em que posso te ajudar?<br><br>1 - Limpeza de pele<br>2 - Depilação a laser<br>3 - Harmonização facial<br>4 - Agendar um horário</div></div></div></div><div><span class="tag">Automação</span><h3>Bots de vendas no WhatsApp</h3><p class="mute">Atendem, usam técnicas de venda e copywriting, chamam para a compra e voltam a falar com quem parou de responder.</p></div></div>
+    <div class="case"><div style="padding:14px 14px 0"><div class="xls"><div class="t">Planilha_Dieta_Treino.xlsx</div><table><tr><th>Refeição</th><th>Alimento</th><th>Qtd</th><th>Kcal</th></tr><tr><td>Café</td><td>Ovos mexidos</td><td>2 un</td><td>140</td></tr><tr><td>Café</td><td>Pão integral</td><td>2 fatias</td><td>130</td></tr><tr><td>Almoço</td><td>Arroz, feijão e frango</td><td>1 prato</td><td>520</td></tr><tr><td>Lanche</td><td>Iogurte com fruta</td><td>1 pote</td><td>150</td></tr><tr><td>Jantar</td><td>Salada e peixe</td><td>1 prato</td><td>380</td></tr><tr><th colspan="3">Total do dia</th><th>1.320</th></tr></table><div class="s">Dieta | Treino | Evolução &middot; ilustração do sistema</div></div></div><div><span class="tag">2017</span><h3>Sistema em Excel</h3><p class="mute">Gerava dieta e treino com a logomarca de cada profissional, em pagamento único, sem assinatura.</p></div></div>
   </div>
 </div></section>
+
+<section class="w cta"><p>Gostou do que viu?</p><a class="btn big pulse" href="https://wa.me/5531994753689?text=Oi%20C%C3%A9sar!%20Vi%20sua%20p%C3%A1gina%20e%20tenho%20uma%20ideia." target="_blank" rel="noopener">Quero meu protótipo sem custo</a></section>
 
 <section id="como"><div class="w">
   <h2>Como funciona</h2>
@@ -125,7 +167,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mute);font-si
 <section id="contato"><div class="w" style="text-align:center">
   <h2>Vamos conversar sobre a sua ideia?</h2>
   <p style="margin:0 auto 18px">Mande uma mensagem. Respondo pessoalmente e sem compromisso.</p>
-  <a class="btn" href="https://wa.me/5531994753089?text=Oi%20C%C3%A9sar!%20Vi%20sua%20p%C3%A1gina%20e%20tenho%20uma%20ideia." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+  <a class="btn" href="https://wa.me/5531994753689?text=Oi%20C%C3%A9sar!%20Vi%20sua%20p%C3%A1gina%20e%20tenho%20uma%20ideia." target="_blank" rel="noopener">Chamar no WhatsApp</a>
   <a class="btn alt" href="https://instagram.com/uai_iatech" target="_blank" rel="noopener">@uai_iatech</a>
   <p class="verso" style="margin-top:46px">“Mais bem-aventurado é dar do que receber.”</p>
   <p class="mute" style="margin:0 auto">Atos 20:35</p>
